@@ -23,14 +23,24 @@ export class AppComponent implements OnInit {
     basicText.x = 10;
     basicText.y = 0;
 
+    const button = new PIXI.Text('da', style);
+    button.x = 10;
+    button.y = 100;
+    button.addListener('pointerdown', () => {
+      button.text = 'net';
+      console.log('working');
+    });
+
     var time : number = 0;
+
+    this.app.stage.addChild(basicText);
+    this.app.stage.addChild(button);
 
     this.app.ticker.add((delta) => {
       time += delta;
-      basicText.x = 100 + Math.sin(time * delta * 0.01) * 100;
+      basicText.x = 100 + Math.sin(time * 0.01) * 100;
     });
 
-    this.app.stage.addChild(basicText);
   }
 }
 
