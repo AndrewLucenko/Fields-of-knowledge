@@ -10,9 +10,9 @@ export class GameTemplateComponent implements OnInit{
   ngOnInit(): void {
     //@ts-ignore
     createUnityInstance(document.querySelector("#unity-canvas"), {
-      dataUrl: "/assets/build/Build/FieldsOfEternalTorment.data",
-      frameworkUrl: "/assets/build/Build/FieldsOfEternalTorment.framework.js",
-      codeUrl: "/assets/build/Build/FieldsOfEternalTorment.wasm",
+      dataUrl: "/assets/build/Build/build.data",
+      frameworkUrl: "/assets/build/Build/build.framework.js",
+      codeUrl: "/assets/build/Build/build.wasm",
       streamingAssetsUrl: "StreamingAssets",
       companyName: "YourCompagny",
       productName: "yourProjectName",
